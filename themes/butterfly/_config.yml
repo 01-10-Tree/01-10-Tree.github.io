@@ -727,15 +727,15 @@ beautify:
 
 # Global font settings
 font:
-  global-font-size: 16px
-  code-font-size: 14px
-  font-family: Arial, sans-serif
+  global-font-size: 16px  # 根据需要调整
+  code-font-size: 14px    # 根据需要调整
+  font-family: Saira, sans-serif
   code-font-family: Courier New, monospace
 
 # Font settings for the site title and site subtitle
 blog_title_font:
-  font_link: https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap
-  font-family: Roboto, sans-serif
+  font_link: 'https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap'
+  font-family: Saira, sans-serif
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:

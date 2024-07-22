@@ -104,5 +104,7 @@ deploy:
   type: ''
 
 markdown:
+  anchors:
+    level: 1
   plugins:
     - "@traptitech/markdown-it-katex"
