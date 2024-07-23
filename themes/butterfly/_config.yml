@@ -22,7 +22,7 @@ menu:
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
@@ -607,19 +607,19 @@ site_verification:
 
 theme_color:
   enable: true
-  main: "#607D8B"
-  paginator: "#455A64"
-  button_hover: "#B0BEC5"
-  text_selection: "#CFD8DC"
-  link_color: "#546E7A"
-  meta_color: "#78909C"
-  hr_color: "#B0BEC5"
-  code_foreground: "#37474F"
-  code_background: "#ECEFF1"
-  toc_color: "#455A64"
-  blockquote_padding_color: "#607D8B"
-  blockquote_background_color: "#CFD8DC"
-  scrollbar_color: "#607D8B"
+  main: "#607D8B"                    # 主色
+  paginator: "#455A64"               # 分页器颜色
+  button_hover: "#B0BEC5"            # 按钮悬停颜色
+  text_selection: "#CFD8DC"          # 文本选择颜色
+  link_color: "#546E7A"              # 链接颜色
+  meta_color: "#78909C"              # 元信息颜色
+  hr_color: "#B0BEC5"                # 水平线颜色
+  code_foreground: "#37474F"         # 代码前景色
+  code_background: "#ECEFF1"         # 代码背景色
+  toc_color: "#455A64"               # 目录颜色
+  blockquote_padding_color: "#607D8B" # 引用块边框颜色
+  blockquote_background_color: "#CFD8DC" # 引用块背景色
+  scrollbar_color: "#607D8B"         # 滚动条颜色
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
@@ -730,7 +730,7 @@ font:
   global-font-size: 16px  # 根据需要调整
   code-font-size: 14px    # 根据需要调整
   font-family: Saira, sans-serif
-  code-font-family: Courier New, monospace
+  code-font-family: JetBrains Mono, monospace
 
 # Font settings for the site title and site subtitle
 blog_title_font:

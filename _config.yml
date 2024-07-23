@@ -4,8 +4,8 @@
 
 # Site
 title: 01-10-Tree's Blog
-subtitle: ''
-description: ''
+subtitle:
+description:
 keywords:
 author: 01-10-Tree
 language: zh-CN
@@ -37,7 +37,7 @@ titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
-  exclude: ''
+  exclude:
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -47,7 +47,7 @@ syntax_highlighter: highlight.js
 highlight:
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace:
   wrap: true
   hljs: false
 prismjs:
@@ -60,7 +60,7 @@ prismjs:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path:
   per_page: 10
   order_by: -date
 
@@ -89,8 +89,8 @@ pagination_dir: page
 
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
-include: []
-exclude: []
+include: 
+exclude:
 ignore:
 
 # Extensions
@@ -101,7 +101,7 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type:
 
 markdown:
   anchors:

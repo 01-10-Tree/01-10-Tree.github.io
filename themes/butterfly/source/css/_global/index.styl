@@ -1,197 +1,213 @@
-:root
-  --global-font-size: $font-size
-  --global-bg: $body-bg
-  --font-color: $font-black
-  --hr-border: lighten($theme-hr-color, 50%)
-  --hr-before-color: lighten($theme-hr-color, 30%)
-  --search-bg: $search-bg
-  --search-input-color: $search-input-color
-  --search-a-color: $search-a-color
-  --preloader-bg: $preloader-bg
-  --preloader-color: $preloader-word-color
-  --tab-border-color: $tab-border-color
-  --tab-botton-bg: $tab-botton-bg
-  --tab-botton-color: $tab-botton-color
-  --tab-button-hover-bg: $tab-button-hover-bg
-  --tab-button-active-bg: $tab-button-active-bg
-  --card-bg: $card-bg
-  --sidebar-bg: $sidebar-background
-  --btn-hover-color: $button-hover-color
-  --btn-color: $button-color
-  --btn-bg: $button-bg
-  --text-bg-hover: rgba($text-bg-hover, .7)
-  --light-grey: $light-grey
-  --dark-grey: $dark-grey
-  --white: $white
-  --text-highlight-color: $text-highlight-color
-  --blockquote-color: $blockquote-color
-  --blockquote-bg: $blockquote-background-color
-  --reward-pop: $reward-pop-up-bg
-  --toc-link-color: $toc-link-color
-  --card-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .05)
-  --card-hover-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .09)
-  --pseudo-hover: $pseudo-hover
-  --headline-presudo: #a0a0a0
-  --scrollbar-color: $scrollbar-color
-  --default-bg-color: $theme-color
-  --zoom-bg: #fff
-  --mark-bg: alpha($dark-black, .3)
-
-body
-  position: relative
-  min-height: 100%
-  background: var(--global-bg)
-  color: var(--font-color)
-  font-size: var(--global-font-size)
-  font-family: $font-family
-  line-height: $text-line-height
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-
-  if !hexo-config('copy.enable')
-    user-select: none
-    -webkit-user-select: none
-
-// scrollbar - chrome/safari
-*::-webkit-scrollbar
-  width: 5px
-  height: 5px
-
-*::-webkit-scrollbar-thumb
-  background: var(--scrollbar-color)
-
-*::-webkit-scrollbar-track
-  background-color: transparent
-
-// scrollbar - firefox
-*
-  scrollbar-width: thin
-  scrollbar-color: var(--scrollbar-color) transparent
-
-input::placeholder
-  color: var(--font-color)
-
-if $web-bg
-  #web_bg
-    position: fixed
-    z-index: -999
-    width: 100%
-    height: 100%
-    background: $web-bg
-    background-attachment: local
-    background-position: center
-    background-size: cover
-    background-repeat: no-repeat
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6
-  position: relative
-  margin: 20px 0 14px
-  color: var(--text-highlight-color)
-  font-weight: bold
-
-  code
-    font-size: inherit !important
-
-*
-  box-sizing: border-box
-
-.table-wrap
-  overflow-x: scroll
-  margin: 0 0 20px
-
-table
-  display: table
-  width: 100%
-  border-spacing: 0
-  border-collapse: collapse
-  empty-cells: show
-
-  thead
-    background: alpha($table-thead-bg, 10%)
-
-  th,
-  td
-    padding: 6px 12px
-    border: 1px solid var(--light-grey)
-    vertical-align: middle
-
-*::selection
-  background: $theme-text-selection-color
-  color: #F7F7F7
-
-button
-  padding: 0
-  outline: 0
-  border: none
-  background: none
-  cursor: pointer
-  touch-action: manipulation
-
-a
-  color: $a-link-color
-  text-decoration: none
-  word-wrap: break-word
-  transition: all .2s
-  overflow-wrap: break-word
-
-  &:hover
-    color: $light-blue
-
-// font
-if $site-name-font
+// 定义CSS变量，使用Sass的变量值
+:root {
+  --global-font-size: $font-size; // 全局字体大小
+  --global-bg: $body-bg; // 全局背景色
+  --font-color: $font-black; // 全局字体颜色
+  --hr-border: lighten($theme-hr-color, 50%); // 水平线边框颜色，变亮50%
+  --hr-before-color: lighten($theme-hr-color, 30%); // 水平线之前的颜色，变亮30%
+  --search-bg: $search-bg; // 搜索框背景色
+  --search-input-color: $search-input-color; // 搜索框输入颜色
+  --search-a-color: $search-a-color; // 搜索框链接颜色
+  --preloader-bg: $preloader-bg; // 加载器背景色
+  --preloader-color: $preloader-word-color; // 加载器文字颜色
+  --tab-border-color: $tab-border-color; // 标签边框颜色
+  --tab-botton-bg: $tab-botton-bg; // 标签按钮背景色
+  --tab-botton-color: $tab-botton-color; // 标签按钮文字颜色
+  --tab-button-hover-bg: $tab-button-hover-bg; // 标签按钮悬停背景色
+  --tab-button-active-bg: $tab-button-active-bg; // 标签按钮激活背景色
+  --card-bg: $card-bg; // 卡片背景色
+  --sidebar-bg: $sidebar-background; // 侧边栏背景色
+  --btn-hover-color: $button-hover-color; // 按钮悬停文字颜色
+  --btn-color: $button-color; // 按钮文字颜色
+  --btn-bg: $button-bg; // 按钮背景色
+  --text-bg-hover: rgba($text-bg-hover, .7); // 文字背景悬停颜色，透明度0.7
+  --light-grey: $light-grey; // 浅灰色
+  --dark-grey: $dark-grey; // 深灰色
+  --white: $white; // 白色
+  --text-highlight-color: $text-highlight-color; // 文字高亮颜色
+  --blockquote-color: $blockquote-color; // 引用文字颜色
+  --blockquote-bg: $blockquote-background-color; // 引用背景色
+  --reward-pop: $reward-pop-up-bg; // 奖励弹窗背景色
+  --toc-link-color: $toc-link-color; // 目录链接颜色
+  --card-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .05); // 卡片默认阴影
+  --card-hover-box-shadow: 0 3px 8px 6px rgba(7, 17, 27, .09); // 卡片悬停阴影
+  --pseudo-hover: $pseudo-hover; // 伪元素悬停样式
+  --headline-presudo: #a0a0a0; // 标题伪元素颜色
+  --scrollbar-color: $scrollbar-color; // 滚动条颜色
+  --default-bg-color: $theme-color; // 默认背景色
+  --zoom-bg: #fff; // 缩放背景色
+  --mark-bg: alpha($dark-black, .3); // 标记背景色，透明度0.3
+}
+// 全局样式设置
+body {
+  position: relative; // 相对定位，便于绝对定位的子元素
+  min-height: 100%; // 最小高度为100%，确保页面填满视口
+  background: var(--global-bg); // 背景色
+  color: var(--font-color); // 字体颜色
+  font-size: var(--global-font-size); // 字体大小
+  font-family: $font-family; // 字体族
+  line-height: $text-line-height; // 行高
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 移动设备上去除点击高亮
+  // 如果禁用复制功能
+  if !hexo-config('copy.enable') {
+    user-select: none; // 禁用用户选择文本
+    -webkit-user-select: none; // Webkit浏览器禁用用户选择文本
+  }
+}
+// 滚动条样式 - Chrome/Safari
+*::-webkit-scrollbar {
+  width: 5px; // 滚动条宽度
+  height: 5px; // 滚动条高度
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-color); // 滚动条滑块颜色
+}
+*::-webkit-scrollbar-track {
+  background-color: transparent; // 滚动条轨道颜色
+}
+// 滚动条样式 - Firefox
+* {
+  scrollbar-width: thin; // 滚动条宽度
+  scrollbar-color: var(--scrollbar-color) transparent; // 滚动条颜色和轨道颜色
+}
+// 输入框占位符样式
+input::placeholder {
+  color: var(--font-color); // 占位符文字颜色
+}
+// 如果启用了网页背景
+if $web-bg {
+  #web_bg {
+    position: fixed; // 固定定位
+    z-index: -999; // 设置较低的层级
+    width: 100%; // 宽度100%
+    height: 100%; // 高度100%
+    background: $web-bg; // 背景图像
+    background-attachment: local; // 背景固定在视口
+    background-position: center; // 背景图像居中
+    background-size: cover; // 背景图像覆盖整个元素
+    background-repeat: no-repeat; // 背景图像不重复
+  }
+}
+// 标题样式
+h1, h2, h3, h4, h5, h6 {
+  position: relative; // 相对定位
+  margin: 20px 0 14px; // 外边距
+  color: var(--text-highlight-color); // 文字颜色
+  font-weight: bold; // 字体加粗
+  code {
+    font-size: inherit !important; // 继承字体大小
+  }
+}
+// 全局盒子模型设置
+* {
+  box-sizing: border-box; // 盒子模型设置为border-box
+}
+// 表格外部包装
+.table-wrap {
+  overflow-x: scroll; // 横向滚动
+  margin: 0 0 20px; // 外边距
+}
+// 表格样式
+table {
+  display: table; // 以表格形式显示
+  width: 100%; // 宽度100%
+  border-spacing: 0; // 边框间距
+  border-collapse: collapse; // 边框合并
+  empty-cells: show; // 显示空单元格
+  thead {
+    background: alpha($table-thead-bg, 10%); // 表头背景色，透明度10%
+  }
+  th, td {
+    padding: 6px 12px; // 内边距
+    border: 1px solid var(--light-grey); // 边框颜色
+    vertical-align: middle; // 垂直对齐
+  }
+}
+// 选区样式
+*::selection {
+  background: $theme-text-selection-color; // 选区背景色
+  color: inherit; // 选区文字颜色
+}
+// 按钮样式
+button {
+  padding: 0; // 内边距为0
+  outline: 0; // 去除轮廓
+  border: none; // 去除边框
+  background: none; // 去除背景
+  cursor: pointer; // 鼠标悬停时显示为指针
+  touch-action: manipulation; // 触摸操作
+}
+// 链接样式
+a {
+  color: $a-link-color; // 链接颜色
+  text-decoration: none; // 去除下划线
+  word-wrap: break-word; // 自动换行
+  transition: all .2s; // 过渡效果
+  overflow-wrap: break-word; // 自动换行
+  &:hover {
+    color: $light-blue; // 悬停时颜色
+  }
+}
+// 站点名称字体
+if $site-name-font {
   #site-title,
   #site-subtitle,
   .site-name,
   #aside-content .author-info__name,
-  #aside-content .author-info__description
-    font-family: $site-name-font
-
-.is-center
-  text-align: center
-
-.pull-left
-  float: left
-
-.pull-right
-  float: right
-
-img
+  #aside-content .author-info__description {
+    font-family: $site-name-font; // 站点名称使用的字体
+  }
+}
+// 文本对齐
+.is-center {
+  text-align: center; // 居中对齐
+}
+.pull-left {
+  float: left; // 左浮动
+}
+.pull-right {
+  float: right; // 右浮动
+}
+// 图像样式
+img {
   &[src=''],
-  &:not([src])
-    opacity: 0
-
-// lazyload blur
-if hexo-config('lazyload.enable') && hexo-config('lazyload.blur') && !hexo-config('lazyload.placeholder')
-  img
-    &[data-lazy-src]:not(.loaded)
-      filter: blur(8px) brightness(1)
-
-    &[data-lazy-src].error
-      filter: none
-
-.img-alt
-  margin: -10px 0 10px
-  color: #858585
-
-  &:hover
-    text-decoration: none !important
-
-blockquote
-  margin: 0 0 20px
-  padding: 12px 15px
-  border-left: 3px solid $blockquote-padding-color
-  background-color: var(--blockquote-bg)
-  color: var(--blockquote-color)
-
-  footer
-    cite
-      &:before
-        padding: 0 5px
-        content: '—'
-
-  & > :last-child
-    margin-bottom: 0 !important
+  &:not([src]) {
+    opacity: 0; // 无源图像透明
+  }
+  // 延迟加载模糊效果
+  if hexo-config('lazyload.enable') && hexo-config('lazyload.blur') && !hexo-config('lazyload.placeholder') {
+    &[data-lazy-src]:not(.loaded) {
+      filter: blur(8px) brightness(1); // 延迟加载图像模糊效果
+    }
+    &[data-lazy-src].error {
+      filter: none; // 加载错误的图像无模糊效果
+    }
+  }
+}
+// 图片替代文字样式
+.img-alt {
+  margin: -10px 0 10px; // 外边距
+  color: #858585; // 文字颜色
+  &:hover {
+    text-decoration: none !important; // 悬停时去除下划线
+  }
+}
+// 引用样式
+blockquote {
+  margin: 0 0 20px; // 外边距
+  padding: 12px 15px; // 内边距
+  border-left: 3px solid $blockquote-padding-color; // 左边框颜色
+  background-color: var(--blockquote-bg); // 背景色
+  color: var(--blockquote-color); // 文字颜色
+  footer {
+    cite {
+      &:before {
+        padding: 0 5px; // 引用前的填充
+        content: '—'; // 引用符号
+      }
+    }
+  }
+  & > :last-child {
+    margin-bottom: 0 !important; // 最后一项去除下边距
+  }
+}
