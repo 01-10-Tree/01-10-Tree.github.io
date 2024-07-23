@@ -27,7 +27,7 @@ highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
 highlight_height_limit: false # unit: px
-code_word_wrap: false
+code_word_wrap: false  
 
 # Social Settings (社交圖標設置)
 # formal:
@@ -182,7 +182,7 @@ post_edit:
 
 # Related Articles
 related_post:
-  enable: true
+  enable: false
   limit: 3 # Number of posts displayed
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
@@ -608,18 +608,18 @@ site_verification:
 theme_color:
   enable: true
   main: "#607D8B"                    # 主色
-  paginator: "#455A64"               # 分页器颜色
-  button_hover: "#B0BEC5"            # 按钮悬停颜色
-  text_selection: "#CFD8DC"          # 文本选择颜色
-  link_color: "#546E7A"              # 链接颜色
-  meta_color: "#78909C"              # 元信息颜色
-  hr_color: "#B0BEC5"                # 水平线颜色
-  code_foreground: "#37474F"         # 代码前景色
-  code_background: "#ECEFF1"         # 代码背景色
-  toc_color: "#455A64"               # 目录颜色
-  blockquote_padding_color: "#607D8B" # 引用块边框颜色
-  blockquote_background_color: "#CFD8DC" # 引用块背景色
-  scrollbar_color: "#607D8B"         # 滚动条颜色
+  paginator: "#90A4AE"               # 分页器颜色（较浅的灰色）
+  button_hover: "#BA68C8"            # 按钮悬停颜色（紫色）
+  text_selection: "#E1F5FE"          # 文本选择颜色（较浅的浅蓝色）
+  link_color: "#BA68C8"              # 链接颜色（较浅的紫色）
+  meta_color: "#78909C"              # 元信息颜色（稍深的灰色）
+  hr_color: "#CFD8DC"                # 水平线颜色（浅灰色）
+  code_foreground: "#546E7A"         # 代码前景色（较浅的深蓝色）
+  code_background: "#ECEFF1"         # 代码背景色（浅灰色）
+  toc_color: "#90A4AE"               # 目录颜色（较浅的灰色）
+  blockquote_padding_color: "#BA68C8" # 引用块边框颜色（较浅的紫色）
+  blockquote_background_color: "#ECEFF1" # 引用块背景色（浅灰色）
+  scrollbar_color: "#607D8B"         # 滚动条颜色（主色）
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
