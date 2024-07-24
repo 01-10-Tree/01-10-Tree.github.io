@@ -44,7 +44,7 @@ favicon: https://img.picgo.net/2024/07/24/faviconec1bec294629ddd4.jpg
 
 # Avatar (頭像)
 avatar:
-  img: /img/avatar.jpg
+  img: https://img.picgo.net/2024/07/24/avatarc0941a9871e2f089.jpg
   effect: false
 
 # Disable all banner image
