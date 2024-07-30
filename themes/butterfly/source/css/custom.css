@@ -16,11 +16,9 @@
     background: transparent !important;
 }
 
-/* 夜间模式遮罩透明 */
-[data-theme="dark"] #footer::before {
-    background: transparent !important;
-}
-
-[data-theme="dark"] #page-header::before {
-    background: transparent !important;
+[data-theme="light"] #aside-content > .card-widget.card-info {
+    background-image: url(https://img.picgo.net/2024/07/31/gradient_image_corrected536fbae81a1562dd.png);
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-size: 100%;
 }
